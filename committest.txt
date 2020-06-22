@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 HELLO SERC-Repo!!!
+=======
+Hello SERC-repo!!!
+>>>>>>> ea6432557f2129be45e8f89cad5f5eef834ea3b9
