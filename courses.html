@@ -1,24 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head></head>    
-<body>
-    <ol>
+<html lang="en">
+<head>
+    <title>Courses</title>
+    <style>
+        .bg{
+            background-image: url("bg-img.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            
+        }
+        a:link{
+            color:darkblue
+        }
+
+            a:visited {
+            color: green;
+            }
+
+            a:hover {
+            color: palevioletred;
+            }
+
+            a:active {
+            color: blue;
+            }
+            .inside{
+            list-style-position: inside;
+            }
+            .outside{
+                list-style-position: outside;
+            }
+    </style>
+</head>    
+<body class="bg">
+    <ol class="outside">
         <li>Python Programming
-            <ul>
+            <ul class="inside">
                 <li>Control Statements</li>
                 <li>Loops</li>
                 <li>DataStructures</li>
             </ul>
         </li>
         <li>Web Development
-            <ul>
+            <ul class="inside">
                 <li>Html Static Designs</li>
                 <li>CSS Style Sheets</li>
                 <li>Bootstrap Framework</li>
             </ul>
         </li>
         <li>C Programming
-            <ul>
+            <ul class="inside">
                 <li>Control Statements and Loops</li>
                 <li>Functions, Pointers</li>
                 <li>DataStructures</li>
@@ -26,7 +58,7 @@
         </li>
     </ol>
     <br>
-    <a href="register.html" target="_blank">Register</a>
+    <a class="register" href="register.html" target="_blank">Register</a>
 
 </body>
 </html>

@@ -1,0 +1,133 @@
+<!doctype HTML>
+<HTML lang="en">
+    <head>
+        <title>Sai_Ram</title>
+        <style>
+            body{
+                background-color: cadetblue;
+                font-family: "Times New Roman", Times, serif;
+                font-style: italic;
+                }
+            .title{
+                text-align: center;
+                font-size: 4rem;
+                color:darkblue;
+                padding: 1.5% 2.5%;
+                display: inline-block;
+                width:10%;}
+            
+            .details{
+                display: block;
+                    }
+            
+            .logo{
+                margin: 0px 0px 75px 100px;
+                display: inline-block;
+                float: right;
+                margin-top: 5%;
+                }
+            .marks{
+                table-layout: auto;
+                }
+            #mark{
+                padding:2% 2%;
+            }
+            .hidden{
+            display:none;
+            } 
+            .overlap{
+                position: absolute;
+                left:0;
+                top:73%;
+            }
+            .course{
+                text-align: left;
+            }
+            .score{
+                text-align: right;
+            }
+            
+            
+
+            .nav ul {
+            list-style: none;
+            background-color:darkslategrey;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            }
+            .nav li {
+            font-size: 1.2em;
+            line-height: 40px;
+            height: 40px;
+            display: inline-block;
+            padding: 1% 5%;
+            }
+
+            .nav a {
+            text-decoration: none;
+            color: #fff;
+
+            }
+            table{
+            width: 60%;
+            }
+            tr:nth-child(even) {background-color:forestgreen}
+
+
+        </style>  
+    </head>
+    <body>
+        
+<div class="nav" >
+    <ul >
+    <li><a class="active" href="#">Home</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="personal-details.html">Personal Details</a></li>
+    </ul>
+</div>
+  
+<div>
+<iframe src="logo.png" class="logo" width="53.28%" height="201" ></iframe>
+<h1 class="title" >Understanding Of HTML!!</h1>
+ </div>
+
+<br><br>
+
+<div style="display: inline-block";>
+    <p>HTML stands for Hyper Text Markup Language. It is the standard markup language for creating Web pages. It basically describes the structure of a Web page.</p>
+    <p class="overlap">HTML consists of a series of elements which tells the browser how to display the content.</p>
+   <h2>Few HTML Tags Are:</h2>
+   <p><b>DOCTYPE html</b> declaration defines that this document is an HTML5 document
+<br> <b>html</b> element is the root element of an HTML page
+<br><b>head</b> element contains meta information about the HTML page
+<br> <b>title</b> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+<br> <b>body</b> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+<br> <b>h1</b> element defines a large heading
+<br> <b>p</b> element defines a paragraph</p>
+<br>
+<p class="hidden">Some HTML elements have no content (like the <b>br</b> element). These elements are called empty elements. Empty elements do not have an end tag!  </p>
+</div>
+
+
+
+
+<br><br>
+
+<div >
+<table  class="marks" >
+    <caption>Marks Sheet</caption>
+    <tr><th id="mark" class="course" >Subjects </th>                <th class="course">Marks</th></tr>
+    <tr><td class="course">Basics Of Finance</td>                   <td class="score">O</td></tr>
+    <tr><td class="course">Engineering Economics and Management</td><td class="score">A+</td></tr>
+    <tr><td class="course">Database Management Systems	</td>        <td class="score">A</td></tr>
+    <tr><td class="course">Software Engineering	</td>            <td class="score">A</td></tr>
+    <tr><td class="course">Design and Analysis of Algorithms</td>   <td class="score">A+</td></tr>
+    <tr><td class="course">Formal Languages and Automata Theory</td><td class="score">A+</td></tr>
+    <tr><td class="course">Database Management Systems Laboratory</td><td class="score">O</td></tr>
+    <tr><td class="course">Unified Modeling Language Laboratory</td> <td class="score">O</td></tr>
+</table>
+</div>
+
+</body>
+</HTML>
