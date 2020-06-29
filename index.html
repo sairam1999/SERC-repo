@@ -2,6 +2,7 @@
 <HTML lang="en">
     <head>
         <title>Sai_Ram</title>
+        
         <style>
             body{
                 background-color: cadetblue;
@@ -118,16 +119,33 @@
 <table  class="marks" >
     <caption>Marks Sheet</caption>
     <tr><th id="mark" class="course" >Subjects </th>                <th class="course">Marks</th></tr>
-    <tr><td class="course">Basics Of Finance</td>                   <td class="score">O</td></tr>
-    <tr><td class="course">Engineering Economics and Management</td><td class="score">A+</td></tr>
-    <tr><td class="course">Database Management Systems	</td>        <td class="score">A</td></tr>
-    <tr><td class="course">Software Engineering	</td>            <td class="score">A</td></tr>
-    <tr><td class="course">Design and Analysis of Algorithms</td>   <td class="score">A+</td></tr>
-    <tr><td class="course">Formal Languages and Automata Theory</td><td class="score">A+</td></tr>
-    <tr><td class="course">Database Management Systems Laboratory</td><td class="score">O</td></tr>
-    <tr><td class="course">Unified Modeling Language Laboratory</td> <td class="score">O</td></tr>
+    <tr><td class="course">Basics Of Finance</td>                   <td class="score" id="marks">92</td></tr>
+    <tr><td class="course">Engineering Economics and Management</td><td class="score" id="marks">85</td></tr>
+    <tr><td class="course">Database Management Systems	</td>        <td class="score" id="marks">75</td></tr>
+    <tr><td class="course">Software Engineering	</td>            <td class="score" id="marks">75</td></tr>
+    <tr><td class="course">Design and Analysis of Algorithms</td>   <td class="score" id="marks">85</td></tr>
+    <tr><td class="course">Formal Languages and Automata Theory</td><td class="score" id="marks">87</td></tr>
+    <tr><td class="course">Database Management Systems Laboratory</td><td class="score" id="marks">93</td></tr>
+    <tr><td class="course">Unified Modeling Language Laboratory</td> <td class="score" id="marks">91</td></tr>
+    <tr><td></td><td></td></tr>
+    <tr><td class="course" >total</td><td class="score" id="total"> </td></tr>
+    <tr><td class="course" >average</td><td class="score" id="average"> </td></tr>
+    <tr><td class="course" >round</td><td class="score" id="round"> </td></tr>
+    <tr><td class="course" >ceil</td><td class="score" id="ceil"> </td></tr>
+    <tr><td class="course" >floor</td><td class="score" id="floor"> </td></tr>
+    <tr><td class="course" >sqrt</td><td class="score" id="sqrt"> </td></tr>
+    <tr><td class="course" >rand</td><td class="score" id="rand"> </td></tr>
+    <tr><td class="course" >sin</td><td class="score" id="sin"> </td></tr>
+
+
 </table>
+<br>
+<button onclick="totalavg()">To get total score,average and other details click here.</button>
+
 </div>
 
 </body>
+<script src="JavaScript.js">
+
+</script>
 </HTML>

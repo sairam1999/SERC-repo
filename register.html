@@ -19,23 +19,38 @@
             color: blue;
             }
         </style>
+        
     </head>
     <body>
-        <form action="displayform.php"  >
+        <form action="displayform.php" name="myform" onsubmit=" return val()" method="POST" >
             <label for="name">Name</label>
-            <input type="text" id="name" name="name"><br><br>
+            <input type="text" id="name" name="name" required><br><br>
             <label for="phonenumber">Phone Number</label>
-            <input type="number" id="number" name="phonenumber"><br><br>
-            <input type="radio" id="bachelors" name="courses" value="bachelors">
+            <input type="number" id="number" name="phonenumber" required><br><br>
+            <input type="radio" id="bachelors" name="courses" value="bachelors" required>
             <label for="bachelors">Bachelors</label>
             <input type="radio" id="masters" name="courses" value="masters">
             <label for="masters">Masters</label><br><br>
-            <textarea name="message" rows="5" cols="20">Description</textarea><br><br>
-            <input type="checkbox" id="cprogramming" name="subject1" value="c programming">
+            <textarea name="message" rows="5" cols="20" required>Description</textarea><br><br>
+            <input type="checkbox" id="cprogramming" name="subject1" value="c programming" min="1" required>
             <label for="cprogramming">C Programming</label>
-            <input type="checkbox" id="datastructures" name="subject2" value="DataStructures">
+            <input type="checkbox" id="datastructures" name="subject2" value="DataStructures" >
             <label for="datastructures">DataStructures</label><br><br>
-            <input type="submit" formmethod="post" value="submit"> 
+            <input type="submit"  value="submit"> 
         </form>
     </body>
+    <script>
+        function val()
+        {
+            if( document.myform.name.value != "[a-z]" ) {
+            alert( "Please provide valid name!" );
+            document.myform.name.focus() ;
+            return false;}
+            var x=document.forms["myform"]["phonenumber"].value;
+            if(x!="[0-9]")
+           { alert("enter only number 0-9");
+            return false;}
+        }
+
+    </script>
 </html>
