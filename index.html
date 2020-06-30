@@ -78,13 +78,13 @@
 
         </style>  
     </head>
-    <body>
+    <body onload="IfElseAndFibonacci()">
         
 <div class="nav" >
     <ul >
-    <li><a class="active" href="#">Home</a></li>
-    <li><a href="register.html">Register</a></li>
-    <li><a href="personal-details.html">Personal Details</a></li>
+    <li><a class="active" onclick="home()" href="#">Home</a></li>
+    <li><a href="register.html" onload="register()">Register</a></li>
+    <li><a href="personal-details.html" onclick="details()">Personal Details</a></li>
     </ul>
 </div>
   
@@ -136,16 +136,26 @@
     <tr><td class="course" >sqrt</td><td class="score" id="sqrt"> </td></tr>
     <tr><td class="course" >rand</td><td class="score" id="rand"> </td></tr>
     <tr><td class="course" >sin</td><td class="score" id="sin"> </td></tr>
-
-
 </table>
 <br>
-<button onclick="totalavg()">To get total score,average and other details click here.</button>
-
+<button onclick="totalavg()">CLICK HERE to get avg,total details.</button>
 </div>
+
+<h2>About JavaScript</h2>
+<p id="js"></p>
+
+<button onclick="words()">CLICK HERE to get words at 5, 7, 10</button>
+<h2 id="word5"></h2>
+<h2 id="word7"></h2>
+<h2 id="word10"></h2>
+
 
 </body>
 <script src="JavaScript.js">
+    
+
+
+
 
 </script>
 </HTML>
