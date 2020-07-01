@@ -1,0 +1,73 @@
+
+            body{
+                background-color: cadetblue;
+                font-family: "Times New Roman", Times, serif;
+                font-style: italic;
+                }
+            .title{
+                text-align: center;
+                font-size: 4rem;
+                color:darkblue;
+                padding: 1.5% 2.5%;
+                display: inline-block;
+                width:10%;}
+            
+            .details{
+                display: block;
+                    }
+            
+            .logo{
+                margin: 0px 0px 75px 100px;
+                display: inline-block;
+                float: right;
+                margin-top: 5%;
+                }
+            .marks{
+                table-layout: auto;
+                }
+            #mark{
+                padding:2% 2%;
+            }
+            .hidden{
+            display:none;
+            } 
+            .overlap{
+                position: absolute;
+                left:0;
+                top:73%;
+            }
+            .course{
+                text-align: left;
+            }
+            .score{
+                text-align: right;
+            }
+            
+            
+
+            .nav ul {
+            list-style: none;
+            background-color:darkslategrey;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            }
+            .nav li {
+            font-size: 1.2em;
+            line-height: 40px;
+            height: 40px;
+            display: inline-block;
+            padding: 1% 5%;
+            }
+
+            .nav a {
+            text-decoration: none;
+            color: #fff;
+
+            }
+            
+            tr:nth-child(even) 
+            {background-color:darkslategrey}
+            
+    
+        

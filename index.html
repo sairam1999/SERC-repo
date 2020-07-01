@@ -2,160 +2,120 @@
 <HTML lang="en">
     <head>
         <title>Sai_Ram</title>
-        
-        <style>
-            body{
-                background-color: cadetblue;
-                font-family: "Times New Roman", Times, serif;
-                font-style: italic;
-                }
-            .title{
-                text-align: center;
-                font-size: 4rem;
-                color:darkblue;
-                padding: 1.5% 2.5%;
-                display: inline-block;
-                width:10%;}
-            
-            .details{
-                display: block;
-                    }
-            
-            .logo{
-                margin: 0px 0px 75px 100px;
-                display: inline-block;
-                float: right;
-                margin-top: 5%;
-                }
-            .marks{
-                table-layout: auto;
-                }
-            #mark{
-                padding:2% 2%;
-            }
-            .hidden{
-            display:none;
-            } 
-            .overlap{
-                position: absolute;
-                left:0;
-                top:73%;
-            }
-            .course{
-                text-align: left;
-            }
-            .score{
-                text-align: right;
-            }
-            
-            
-
-            .nav ul {
-            list-style: none;
-            background-color:darkslategrey;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-            }
-            .nav li {
-            font-size: 1.2em;
-            line-height: 40px;
-            height: 40px;
-            display: inline-block;
-            padding: 1% 5%;
-            }
-
-            .nav a {
-            text-decoration: none;
-            color: #fff;
-
-            }
-            table{
-            width: 60%;
-            }
-            tr:nth-child(even) {background-color:forestgreen}
-
-
-        </style>  
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
     </head>
-    <body onload="IfElseAndFibonacci()">
+<body onload="IfElseAndFibonacci()">
         
-<div class="nav" >
+<!--<div class="nav" >
     <ul >
     <li><a class="active" onclick="home()" href="#">Home</a></li>
     <li><a href="register.html" onload="register()">Register</a></li>
     <li><a href="personal-details.html" onclick="details()">Personal Details</a></li>
     </ul>
-</div>
+</div>-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">    
+    <div  id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html" onclick="home()">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html"  onload="register()">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="personal-details.html" onclick="details()">Personal Details</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
   
 <div>
-<iframe src="logo.png" class="logo" width="53.28%" height="201" ></iframe>
+<img src="logo.png" class="logo" width="40%" height="150" >
 <h1 class="title" >Understanding Of HTML!!</h1>
  </div>
-
-<br><br>
 
 <div style="display: inline-block";>
     <p>HTML stands for Hyper Text Markup Language. It is the standard markup language for creating Web pages. It basically describes the structure of a Web page.</p>
     <p class="overlap">HTML consists of a series of elements which tells the browser how to display the content.</p>
-   <h2>Few HTML Tags Are:</h2>
-   <p><b>DOCTYPE html</b> declaration defines that this document is an HTML5 document
-<br> <b>html</b> element is the root element of an HTML page
-<br><b>head</b> element contains meta information about the HTML page
-<br> <b>title</b> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
-<br> <b>body</b> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
-<br> <b>h1</b> element defines a large heading
-<br> <b>p</b> element defines a paragraph</p>
-<br>
-<p class="hidden">Some HTML elements have no content (like the <b>br</b> element). These elements are called empty elements. Empty elements do not have an end tag!  </p>
+    <h2>Few HTML Tags Are:</h2>
+    <p><b>DOCTYPE html</b> declaration defines that this document is an HTML5 document
+    <br> <b>html</b> element is the root element of an HTML page
+    <br><b>head</b> element contains meta information about the HTML page
+    <br> <b>title</b> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)
+    <br> <b>body</b> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
+    <br> <b>h1</b> element defines a large heading
+    <br> <b>p</b> element defines a paragraph</p>
+    <br>
+    <p class="hidden">Some HTML elements have no content (like the <b>br</b> element). These elements are called empty elements. Empty elements do not have an end tag!  </p>
 </div>
-
-
-
-
 <br><br>
 
-<div >
-<table  class="marks" >
-    <caption>Marks Sheet</caption>
-    <tr><th id="mark" class="course" >Subjects </th>                <th class="course">Marks</th></tr>
-    <tr><td class="course">Basics Of Finance</td>                   <td class="score" id="marks">92</td></tr>
-    <tr><td class="course">Engineering Economics and Management</td><td class="score" id="marks">85</td></tr>
-    <tr><td class="course">Database Management Systems	</td>        <td class="score" id="marks">75</td></tr>
-    <tr><td class="course">Software Engineering	</td>            <td class="score" id="marks">75</td></tr>
-    <tr><td class="course">Design and Analysis of Algorithms</td>   <td class="score" id="marks">85</td></tr>
-    <tr><td class="course">Formal Languages and Automata Theory</td><td class="score" id="marks">87</td></tr>
-    <tr><td class="course">Database Management Systems Laboratory</td><td class="score" id="marks">93</td></tr>
-    <tr><td class="course">Unified Modeling Language Laboratory</td> <td class="score" id="marks">91</td></tr>
+
+
+
+<table  class="marks table table-hover table-dark " >
+    
+    <thead><tr><th id="mark" class="course col-2" >Subjects </th>                <th class="course col-2">Marks</th></tr></thead>
+    <tbody><tr><td class="course">Basics Of Finance</td>                   <td class="score col-2" id="marks">92</td></tr>
+    <tr><td class="course col-2">Engineering Economics and Management</td><td class="score col-2" id="marks">85</td></tr>
+    <tr><td class="course col-2">Database Management Systems	</td>        <td class="score col-2" id="marks">75</td></tr>
+    <tr><td class="course col-2">Software Engineering	</td>            <td class="score col-2" id="marks">75</td></tr>
+    <tr><td class="course col-2">Design and Analysis of Algorithms</td>   <td class="score col-2" id="marks">85</td></tr>
+    <tr><td class="course col-2">Formal Languages and Automata Theory</td><td class="score col-2" id="marks">87</td></tr>
+    <tr><td class="course col-2">Database Management Systems Laboratory</td><td class="score col-2" id="marks">93</td></tr>
+    <tr><td class="course col-2">Unified Modeling Language Laboratory</td> <td class="score col-2" id="marks">91</td></tr>
     <tr><td></td><td></td></tr>
-    <tr><td class="course" >total</td><td class="score" id="total"> </td></tr>
-    <tr><td class="course" >average</td><td class="score" id="average"> </td></tr>
-    <tr><td class="course" >round</td><td class="score" id="round"> </td></tr>
-    <tr><td class="course" >ceil</td><td class="score" id="ceil"> </td></tr>
-    <tr><td class="course" >floor</td><td class="score" id="floor"> </td></tr>
-    <tr><td class="course" >sqrt</td><td class="score" id="sqrt"> </td></tr>
-    <tr><td class="course" >rand</td><td class="score" id="rand"> </td></tr>
-    <tr><td class="course" >sin</td><td class="score" id="sin"> </td></tr>
+    <tr><td class="course col-2" >total</td><td class="score col-2" id="total"> </td></tr>
+    <tr><td class="course col-2" >average</td><td class="score col-2" id="average"> </td></tr>
+    <tr><td class="course col-2" >round</td><td class="score col-2" id="round"> </td></tr>
+    <tr><td class="course col-2" >ceil</td><td class="score col-2" id="ceil"> </td></tr>
+    <tr><td class="course col-2" >floor</td><td class="score col-2" id="floor"> </td></tr>
+    <tr><td class="course col-2" >sqrt</td><td class="score col-2" id="sqrt"> </td></tr>
+    <tr><td class="course col-2" >random</td><td class="score col-2" id="rand"> </td></tr>
+    <tr><td class="course col-2" >sin</td><td class="score col-lg-2" id="sin"> </td></tr></tbody>
 </table>
-<br>
-<button onclick="totalavg()">CLICK HERE to get avg,total details.</button>
-</div>
+<button onclick="totalavg()" class="btn btn-primary">CLICK HERE to get avg,total details.</button>
+
 
 <h2>About JavaScript</h2>
-<p id="js"></p>
+<h2 id="js"></h2>
 
-<button onclick="words()">CLICK HERE to get words at 5, 7, 10</button>
+
+<button onclick="words()" class="btn btn-primary" id="shower">CLICK HERE to get words at 5, 7, 10 from above text</button>
 <h2 id="word5"></h2>
 <h2 id="word7"></h2>
 <h2 id="word10"></h2>
 
 
+<button class="btn btn-danger" id="hidden">Click Here to Hide the above 3 words</button>
+
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ <script src="JavaScript.js"></script>
+ <script>
+    $( "#hidden" ).click(function() {
+      $( "#word5" ).hide( "slow" );
+      $( "#word7" ).hide( "slow" );
+      $( "#word10" ).hide( "slow" );
+    });
+    $( "#shower" ).click(function() {
+  $( "#word5").show( 2000 );
+  $( "#word7").show( 2000 );
+  $( "#word10").show( 2000 );
+});
+
+    </script>
 </body>
-<script src="JavaScript.js">
-    
+
+ 
 
 
 
 
-</script>
+
+
 </HTML>
