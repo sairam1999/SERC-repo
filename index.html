@@ -4,6 +4,9 @@
         <title>Sai_Ram</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     </head>
 <body onload="IfElseAndFibonacci()">
         
@@ -32,9 +35,12 @@
 
   
 <div>
-<img src="logo.png" class="logo" width="40%" height="150" >
+<img src="logo.png" id="logo-pic" class="logo" width="40%" height="150" >
 <h1 class="title" >Understanding Of HTML!!</h1>
+
  </div>
+ <button class="btn btn-dark" id="dclick">DOUBLE CLICK HERE(to toggle logo) </button>
+
 
 <div style="display: inline-block";>
     <p>HTML stands for Hyper Text Markup Language. It is the standard markup language for creating Web pages. It basically describes the structure of a Web page.</p>
@@ -54,8 +60,8 @@
 
 
 
-
-<table  class="marks table table-hover table-dark " >
+<div >
+<table  class="marks table table-hover table-dark " id="fade" >
     
     <thead><tr><th id="mark" class="course col-2" >Subjects </th>                <th class="course col-2">Marks</th></tr></thead>
     <tbody><tr><td class="course">Basics Of Finance</td>                   <td class="score col-2" id="marks">92</td></tr>
@@ -76,10 +82,13 @@
     <tr><td class="course col-2" >random</td><td class="score col-2" id="rand"> </td></tr>
     <tr><td class="course col-2" >sin</td><td class="score col-lg-2" id="sin"> </td></tr></tbody>
 </table>
+</div>
 <button onclick="totalavg()" class="btn btn-primary">CLICK HERE to get avg,total details.</button>
+<button class="btn btn-danger" id="fadeoutButton">Click Here to FadeOut TABLE</button>
+<button class="btn btn-primary" id="fadeinButton">Click Here to FadeIn TABLE</button>
 
 
-<h2>About JavaScript</h2>
+<h2 >About JavaScript</h2>
 <h2 id="js"></h2>
 
 
@@ -90,13 +99,12 @@
 
 
 <button class="btn btn-danger" id="hidden">Click Here to Hide the above 3 words</button>
+<button class="btn btn-primary" id="getMsg">CLICK HERE TO GET A  MESSAGE</button>
+<button class="btn btn-primary" id="postMsg">CLICK HERE TO POST A  MESSAGE</button>
 
- <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
- <script src="JavaScript.js"></script>
+ 
  <script>
+     //jquery hide/show
     $( "#hidden" ).click(function() {
       $( "#word5" ).hide( "slow" );
       $( "#word7" ).hide( "slow" );
@@ -108,7 +116,59 @@
   $( "#word10").show( 2000 );
 });
 
+
+//jquery dobule click,toggle
+$(document).ready(function(){
+    $("#dclick").dblclick(function() { 
+            $("#logo-pic").toggle(); 
+        });
+    });
+
+//fadein ,fadeout
+jQuery(document).ready(function(){
+jQuery( "#fadeoutButton" ).click(function() {
+  jQuery( "#fade" ).fadeOut();
+});
+});
+jQuery(document).ready(function(){
+jQuery( "#fadeinButton" ).click(function() {
+  jQuery( "#fade" ).fadeIn();
+});
+});
+
+//get method
+$(document).ready(function(){
+  $("#getMsg").click(function(){
+    $.get("display.asp",
+    function(data,status){
+      alert("Data:" + data + "\nStatus: " + status);
+    });
+  });
+});
+//post method
+$(document).ready(function(){
+  $("#postMsg").click(function(){
+    $.post("displayPost.asp",
+	{
+		name: "Sai Ram",
+		clg: "GITAM UNIVERSITY"
+	},
+    function(data,status){	
+      alert("Data:" + data + "\nStatus: " + status);
+    });
+  });
+});
+
+
+
     </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+ <script src="JavaScript.js"></script>
+
+
 </body>
 
  
